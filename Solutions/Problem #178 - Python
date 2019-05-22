@@ -1,0 +1,27 @@
+import random
+
+
+def game(id):
+    if id == 1:
+        target = 6
+    elif id == 2:
+        target = 5
+    
+    rolls = 0
+    last_roll = 0
+    while True:
+        num = random.randrange(1, 7)
+        rolls += 1
+        if last_roll == 5 and num == target:
+            return rolls
+        last_roll = num
+        
+        
+game1_results = []
+game2_results = []
+
+for i in range(100000):
+    game1_results.append(game(1))
+    game2_results.append(game(2))
+print(sum(game1_results) / len(game1_results))  # ~36
+print(sum(game2_results) / len(game2_results))  # ~42
