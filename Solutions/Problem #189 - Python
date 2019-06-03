@@ -1,0 +1,7 @@
+def f(iter):
+    sub = set(iter)
+    lenght = len(sub)
+    return lenght
+    
+
+f([5, 1, 3, 5, 2, 3, 4, 1])  # returns 5
