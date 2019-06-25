@@ -1,0 +1,4 @@
+import openpyxl
+
+
+openpyxl.utils.get_column_letter(27)  # returns 'AA'
